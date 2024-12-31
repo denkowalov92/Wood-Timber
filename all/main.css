@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        background-color: #4CAF50;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+    header nav.active {
+        display: flex;
+    }
+    header .hamburger {
+        display: flex;
+    }
+}
+
+html, body {
+    height: 100%; /* Ensures the body takes up the full height of the page */
+    margin: 0; /* Removes default margin */
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+footer .columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+footer .columns div {
+    flex: 1;
+    max-width: 200px;
+    margin: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+    background-image: url('Img/pexels-paulita-128639.jpg'); /* Path relative to the CSS file */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    padding: 50px 20px;
+    color: white; /* You can adjust the text color depending on the image */
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #4CAF50;
+}
+
+.hero button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.features div {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.products, .categories {
+    padding: 20px;
+    text-align: center;
+}
+
+.products h2, .categories h2 {
+    color: #4CAF50;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    padding: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}

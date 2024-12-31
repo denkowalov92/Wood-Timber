@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        background-color: #4CAF50;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+    header nav.active {
+        display: flex;
+    }
+    header .hamburger {
+        display: flex;
+    }
+}
+.accordion {
+    width: 80%;
+    margin: 50px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.accordion-item {
+    background-color: #fff;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-header {
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #45a049;
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.accordion-content {
+    padding: 15px;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    color: #666;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.accordion-item.open .accordion-content {
+    display: block;
+}
+
+.accordion-item.open .accordion-header {
+    background-color: #45a049;
+}
+
+.accordion-item.open .accordion-header h3 {
+    color: white;
+}
+html, body {
+    height: 100%; /* Ensures the body takes up the full height of the page */
+    margin: 0; /* Removes default margin */
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+footer .columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+footer .columns div {
+    flex: 1;
+    max-width: 200px;
+    margin: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    header nav {
+        display: none; /* Скрываем меню по умолчанию */
+        flex-direction: column;
+        background-color: #4CAF50;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    header nav.active {
+        display: flex; /* Показываем меню, если класс 'active' добавлен */
+    }
+
+    .hamburger {
+        display: flex; /* Показываем бургер-меню */
+    }
+}

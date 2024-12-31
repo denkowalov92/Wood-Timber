@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        background-color: #4CAF50;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+    header nav.active {
+        display: flex;
+    }
+    header .hamburger {
+        display: flex;
+    }
+}
+.about-us {
+    padding: 60px 20px;
+    background-color: #ffffff; /* White background */
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-us h2 {
+    font-size: 42px;
+    color: #2c3e50; /* Darker shade for better contrast */
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.about-us p {
+    font-size: 18px;
+    color: #7f8c8d; /* Lighter grey for text */
+    margin-bottom: 40px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Flexible grid */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.about-item {
+    background-color: #ffffff;
+    border: 1px solid #e1e8f0;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align text left for a more formal look */
+}
+
+.about-item:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.about-item h3 {
+    font-size: 28px;
+    color: #2c3e50; /* Dark color for headings */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-item p {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        padding: 40px 15px;
+    }
+
+    .about-us h2 {
+        font-size: 32px;
+    }
+
+    .about-item {
+        padding: 20px;
+    }
+
+    .about-item h3 {
+        font-size: 24px;
+    }
+
+    .about-item p {
+        font-size: 15px;
+    }
+}
+html, body {
+    height: 100%; /* Ensures the body takes up the full height of the page */
+    margin: 0; /* Removes default margin */
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+footer .columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+footer .columns div {
+    flex: 1;
+    max-width: 200px;
+    margin: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+header .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        background-color: #4CAF50;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 100;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    header .hamburger {
+        display: flex;
+    }
+}
